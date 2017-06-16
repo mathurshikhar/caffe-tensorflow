@@ -35,6 +35,8 @@ The following converted models have been verified on the ILSVRC2012 validation s
 
 ## Notes
 
+- This project is only supporting legacy versions of Python (eg-2.7), and it doesn't support Python 3.
+
 - Only the new Caffe model format is supported. If you have an old model, use the `upgrade_net_proto_text` and `upgrade_net_proto_binary` tools that ship with Caffe to upgrade them first. Also make sure you're using a fairly recent version of Caffe.
 
 - It appears that Caffe and TensorFlow cannot be concurrently invoked (CUDA conflicts - even with `set_mode_cpu`). This makes it a two-stage process: first extract the parameters with `convert.py`, then import it into TensorFlow.
